@@ -145,6 +145,7 @@
   margin: 0;
   padding: 0;
 }
+
 /**
  * The weekday labels
  */
@@ -156,8 +157,26 @@
   font-weight: 500;
   /* Increase the spacing a tad */
 }
+
+/**
+ * The weeknumbers
+ */
+.picker__weeknumber {
+  width: 7.285714286%;
+  font-size: .75em;
+  padding-bottom: .25em;
+  color: #999999;
+  font-weight: 500;
+  text-align: left;
+  /* Increase the spacing a tad */
+}
+
 @media (min-height: 33.875em) {
   .picker__weekday {
+    padding-bottom: .5em;
+  }
+
+  .picker__weeknumber {
     padding-bottom: .5em;
   }
 }

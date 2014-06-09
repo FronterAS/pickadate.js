@@ -156,11 +156,16 @@
   font-weight: 500;
   /* Increase the spacing a tad */
 }
+@media (min-height: 33.875em) {
+  .picker__weekday {
+    padding-bottom: .5em;
+  }
+}
 /**
- * The weeknumbers
+ * The weeknumber
  */
 .picker__weeknumber {
-  width: 7.285714286%;
+  width: 7.142857143%;
   font-size: .75em;
   padding-bottom: .25em;
   color: #999999;
@@ -169,9 +174,6 @@
   /* Increase the spacing a tad */
 }
 @media (min-height: 33.875em) {
-  .picker__weekday {
-    padding-bottom: .5em;
-  }
   .picker__weeknumber {
     padding-bottom: .5em;
   }

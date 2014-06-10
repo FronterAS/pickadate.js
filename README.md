@@ -36,8 +36,8 @@ There are currently two pickers: **date** and **time**.
 
 File                    | Contents                 | Size (min & gzip)
 ----------------------- | ------------------------ | ----------------------
-`picker.js`             | __Base *__               | 1.74kb
-`picker.date.js`        | Date picker              | 2.59kb
+`picker.js`             | __Base *__               | 1.75kb
+`picker.date.js`        | Date picker              | 2.70kb
 `picker.time.js`        | Time picker              | 1.83kb
 
 __*__ The base script is **required** for any of the pickers to function.
@@ -52,10 +52,10 @@ All themes are [generated using LESS](#less-styling) and compiled from the `lib/
 File                    | Contents                     | Size (min & gzip)
 ----------------------- | ---------------------------- | ----------------------
 `default.css`           | __Base default *__           | 0.47kb
-`default.date.css`      | Default date picker          | 0.70kb
+`default.date.css`      | Default date picker          | 0.73kb
 `default.time.css`      | Default time picker          | 0.35kb
 `classic.css`           | __Base classic *__           | 0.39kb
-`classic.date.css`      | Classic date picker          | 0.70kb
+`classic.date.css`      | Classic date picker          | 0.73kb
 `classic.time.css`      | Classic time picker          | 0.35kb
 `rtl.css`               | __RTL language stylings **__ | 0.10kb
 

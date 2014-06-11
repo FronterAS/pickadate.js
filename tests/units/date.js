@@ -1341,47 +1341,46 @@ test( '`data-value` to select, highlight, and view', function() {
     deepEqual( picker.get( 'view' ).obj, new Date(1988,7,1), 'Viewsets date' )
 })
 
-module('Date picker with a week number', {
+module( 'Date picker with a week number', {
     teardown: function() {
         $DOM.empty()
     }
 })
 
-test('Date picker have week number view', function() {
-    $DOM.append($INPUT.clone())
-    var $input = $DOM.find('input').pickadate({
+test( 'Date picker have week number view', function() {
+    $DOM.append( $INPUT.clone() )
+    var $input = $DOM.find( 'input' ).pickadate({
         showWeekNumber : true
     })
-    var picker = $input.pickadate('picker')
+    var picker = $input.pickadate( 'picker' )
 
     // Assert datepicker table class.
-    ok(picker.$root.find('.' + $.fn.pickadate.defaults.klass.table)
-        .hasClass($.fn.pickadate.defaults.klass.tableWithWeek));
+    ok( picker.$root.find( '.' + $.fn.pickadate.defaults.klass.table )
+        .hasClass( $.fn.pickadate.defaults.klass.tableWithWeek ) )
 
     // Assert datepicker header column, it should have week column.
-    ok(picker.$root.find('.' + $.fn.pickadate.defaults.klass.table + ' thead th').first()
-       .hasClass($.fn.pickadate.defaults.klass.weekNumbers));
+    ok( picker.$root.find( '.' + $.fn.pickadate.defaults.klass.table + ' thead th' ).first()
+       .hasClass( $.fn.pickadate.defaults.klass.weekNumbers ) )
 
     // First column atepicker table row should have first column as week number.
-    var dateRows = picker.$root.find('.' + $.fn.pickadate.defaults.klass.table + ' tbody tr')
-    for (index = 0; index < dateRows.length; index += 1) {
-        ok($(dateRows[index]).find('td').first().find('div')
-            .hasClass($.fn.pickadate.defaults.klass.dayWeek));
+    var dateRows = picker.$root.find( '.' + $.fn.pickadate.defaults.klass.table + ' tbody tr' )
+    for ( index = 0; index < dateRows.length; index += 1 ) {
+        ok( $( dateRows[index] ).find( 'td' ).first().find( 'div' )
+            .hasClass( $.fn.pickadate.defaults.klass.dayWeek ) )
     }
 })
 
-test('Correct week number for each week', function() {
-    $DOM.append($INPUT.clone().data('value', '2014/01/01'))
-    var $input = $DOM.find('input').pickadate({
+test( 'Correct week number for each week', function() {
+    $DOM.append( $INPUT.clone().data( 'value', '2014/01/01' ) )
+    var $input = $DOM.find( 'input' ).pickadate({
         formatSubmit: 'yyyy/mm/dd',
         showWeekNumber : true
     })
-    var picker = $input.pickadate('picker')
+    var picker = $input.pickadate( 'picker' )
 
-    var expectedWeek = ['1', '2', '3', '4', '5', '6']
-    var dateRows = picker.$root.find('.' + $.fn.pickadate.defaults.klass.table + ' tbody tr')
-    for (index = 0; index < dateRows.length; index += 1) {
-        strictEqual($(dateRows[index]).find('td').first().text(), expectedWeek[index]);
+    var expectedWeek = [ '1', '2', '3', '4', '5', '6' ]
+    var dateRows = picker.$root.find( '.' + $.fn.pickadate.defaults.klass.table + ' tbody tr' )
+    for ( index = 0; index < dateRows.length; index += 1 ) {
+        strictEqual( $( dateRows[index] ).find( 'td' ).first().text(), expectedWeek[index] )
     }
 })
-

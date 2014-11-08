@@ -162,6 +162,28 @@
   }
 }
 /**
+ * The weeknumber
+ */
+.picker__weektable .picker__weeknumber {
+  width: 12.5%;
+  font-size: .75em;
+  padding-bottom: .25em;
+  color: #999999;
+  font-weight: 500;
+  /* Increase the spacing a tad */
+}
+@media (min-height: 33.875em) {
+  .picker__weektable .picker__weeknumber {
+    padding-bottom: .5em;
+  }
+}
+.picker__weektable .picker__dayweek {
+  color: #999999;
+}
+.picker__weektable .picker__weekday {
+  width: 12.5%;
+}
+/**
  * The days on the calendar
  */
 .picker__day {
